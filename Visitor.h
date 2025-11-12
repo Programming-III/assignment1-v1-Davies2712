@@ -1,15 +1,25 @@
-#ifndef VISITOR_H
-#define VISITOR_H
+//
+// Created by David on 12/11/2025.
+//
 
-#include <string>
+#ifndef MILESTONE_1_VISITOR_H
+#define MILESTONE_1_VISITOR_H
+#include <iostream>
 using namespace std;
 
-//define visitor class here
-
-
-
-
-
-
-
-#endif
+class Visitor {
+private:
+    string visitorName;
+    int ticketsBought;
+public:
+    Visitor(){};
+    Visitor( string vn,int tb) {
+        visitorName=vn;
+        ticketsBought=tb;
+    }
+    ~Visitor(){};
+    string getVisitorName();
+    int getTicketsBought();
+    void displayInfo();
+};
+#endif //MILESTONE_1_VISITOR_H
