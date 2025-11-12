@@ -11,15 +11,17 @@ using namespace std;
 
 #include "Animal.h"
 
-class Enclosure : public Animal{
+class Enclosure {
 private:
     Animal* animal;
     int capacity;
     int currentCount;
     public:
     Enclosure();
-    Enclosure(string n, int a, bool h,Animal* a) : Animal(n,a,h) {
+    Enclosure(int cc,int c,Animal* a)  {
         animal=new Animal[];
+        capacity=c;
+        currentCount=cc;
     }
 
     ~Enclosure() {
